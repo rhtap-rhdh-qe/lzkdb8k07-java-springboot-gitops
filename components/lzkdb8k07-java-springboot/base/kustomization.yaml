@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: lzkdb8k07-java-springboot
+  janus-idp.io/tekton: lzkdb8k07-java-springboot
+  backstage.io/kubernetes-id: lzkdb8k07-java-springboot
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: lzkdb8k07-java-springboot
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
